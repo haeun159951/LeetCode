@@ -4,15 +4,10 @@ const isPalindromeNumber = function (num) {
   let reverseNum = 0;
   let remainder;
 
-  // get the reverse of original num
-  // store it in variable
   while (num != 0) {
     remainder = num % 10;
-    console.log(`remaninder: ${remainder}`);
     reverseNum = reverseNum * 10 + remainder;
-    console.log(`reverseNum: ${reverseNum}`);
     num /= 10;
-    console.log(`num: ${num}`);
   }
   return originalNum == reverseNum;
 };
@@ -27,3 +22,12 @@ var isPalindrome = function (x) {
 };
 
 console.log(isPalindrome(121));
+
+// create reverse variable
+// create current variable equal to x
+// while loop for current doesnt equal to 0
+
+// digit
+// set reverse equal to reversed * 10 + current mod 10.
+// divde curreny by 10
+// return fif eqal

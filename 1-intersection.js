@@ -1,8 +1,9 @@
 var nums1 = [4, 9, 5];
 var nums2 = [9, 4, 9, 8, 4];
-
+// expected output
+// Output: [4,9]
+// Explanation: [9,4]
 // Set - no duplication and no order in the array
-
 const intersection = (nums1, nums2) => {
   let set1 = new Set();
   let set2 = new Set();
@@ -29,4 +30,4 @@ const intersection = (nums1, nums2) => {
   return temp;
 };
 
-// 더 짧게!!
+console.log(intersection(nums1, nums2));
