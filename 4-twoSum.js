@@ -26,17 +26,16 @@ function twoSum(nums, target) {
 
   for (let i = 0; i < nums.length; i++) {
     let num1 = nums[i]; /// current value
-    console.log(num1);
     let num2 = target - num1; // value which is the number
 
-    console.log(num2);
     if (map.has(num2)) {
-      console.log([map.get(num2), i]); ///1,0
       return [map.get(num2), i]; // 1,0
     }
 
     map.set(num1, i);
   }
+
+  console.log(map);
 }
 
 console.log(twoSum(nums, 9));
