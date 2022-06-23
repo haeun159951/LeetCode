@@ -1,21 +1,11 @@
-var removeDuplicates = function (nums) {
-  let len = nums.length;
-
-  if (len === 0) {
-    return 0;
-  }
-
-  let j = 1;
-  for (let i = 0; i < len - 1; i++) {
-    if (nums[i] !== nums[i + 1]) {
-      // no duplicate
-      nums[j] = nums[i + 1];
-      j++;
+var removeDuplicates = function (arr) {
+  var tmp = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (tmp.indexOf(arr[i]) == -1) {
+      tmp.push(arr[i]);
     }
   }
-
-  console.log();
-  return j;
+  return tmp;
 };
 
 console.log(removeDuplicates([1, 2, 5, 2, 1, 8]));
