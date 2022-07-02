@@ -1,14 +1,17 @@
 var removeDuplicates = function (arr) {
-  var tmp = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (tmp.indexOf(arr[i]) == -1) {
-      tmp.push(arr[i]);
+  let count = 0;
+  let indexInsert = 1;
+
+  for (let j = 0; j < arr.length; j++) {
+    if (arr[i] !== arr[i + 1]) {
+      arr[indexInsert++] = arr[i];
+      count++;
     }
   }
-  return tmp;
+  return count - indexInsert;
 };
 
-console.log(removeDuplicates([1, 2, 5, 2, 1, 8]));
+console.log(removeDuplicates([1, 1, 2]));
 
 // faster way to use set
 
